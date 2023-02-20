@@ -1,1 +1,35 @@
-<p>usuario works!</p>
+<form >
+
+    <div >
+        <label name="username">Nome de Usuário</label>
+        <input type="text" name="username" id="username" formControlName="usernome" placeholder="Insira o seu Usuario" required>
+    </div>  
+
+    <div >
+        <label name="nome">Nome</label>
+        <input type="text" name="nome" id="nome" formControlName="nome" placeholder="Informe seu nome" required>
+        
+    </div> 
+
+    <div >
+        <label name="email">E-mail</label>
+        <input type="email" name="email" id="email" formControlName="email" placeholder="Informe seu email" required> 
+    </div>   
+
+    <div >
+        <label name="senha">Senha</label>
+        <input type="password" nome="senha"  id="senha" formControlName="senha" placeholder="Insira sua senha" required>
+    </div>
+
+    <div >
+        <label name="confsenha">Confirme a senha</label>
+        <input type="password" nome="confsenha"  id="confsenha" formControlName="confsenha"  placeholder="Insira sua senha" required>
+    </div>
+
+    <div>
+      <input type="hidden" name="acao" value="enviar">
+      <button type="submit" name="Submit" >Cadastrar</button>
+    </div>
+
+</form>
+
