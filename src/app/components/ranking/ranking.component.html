@@ -1,26 +1,28 @@
-<table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Usarname</th>
-        <th scope="col">Pontuação</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>20</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>13</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td >Jogador </td>
-        <td> 12</td>
-      </tr>
-    </tbody>
-  </table>
+// Parte fixa, cabeçalho
+<p>Ranking Usuarios</p>
+<table>
+    <tr>
+    <td> Posição</td>
+    <td>Nome</td>
+    <td>Pontuação</td>
+
+
+    // CÓDIGO PHP, VERIFICAR COMO INTEGRAR PHP NO ANGULAR
+    <?php $posicao = 1; //variavel
+    // Inclui o arquivo que faz a conexão ao banco de dadosinclude
+    ("includes/mysqli.php");
+    //consulta 
+    sql$query = mysql_query("SELECT Nome,Pontuacao FROM usuario ORDER BY pontuacao desc") or die(mysql_error());
+    //faz um looping e cria um  array com os campos da consulta
+    while($array = mysql_fetch_array($query)) {
+    $nome=$array['Nome'];$pontuacao=$array['Pontuacao'];
+    
+    ?>
+     <tr><td>
+        <?php echo $posicao; ?>
+    </td><td><?php echo $nome; ?></td><td>
+        <?php echo $pontuacao; ?></td><td>
+      
+    <?php$posicao = $posicao + 1; // acumula proxima posicao ate terminar} ?>
+</table>
+    
