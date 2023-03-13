@@ -1,50 +1,50 @@
-<form>
+  
+  <div class="sidebar">
 
-    <div class="form-group">
-      <label for="selecao1">selecao1</label>
-      <input type="text" class="form-control" name="selecao1" id="selecao1" required>
-    </div>
-   
-    <div class="form-group">
-    <label for="selecao2">selecao2</label>
-    <input type="text" class="form-control" name="selecao2" id="selecao2" required>
-    </div>
-  
-    <div class="form-group">
-    <label for="horarioinicio">horarioinicio</label>
-    <input type="text" class="form-control" name="horarioinicio" id="horarioinicio" required>
-    </div>
-    
-    <div class="form-group">
-    <label for="horariofim">horariofim</label>
-    <input type="text" class="form-control" name="horariofim" id="horariofim" required>
-    </div>
-    
-  
-  
-    <div class="form-group">
-      <label>aberturaflag</label>
-  
-          <div class="form-check">
-          <input class="form-check-input" type="radio" name="aberturaflag" id="aberto" [value]="1">
-          <label class="form-check-label" for="aberto">Aberto</label>
-          </div>
-  
-          <div class="form-check">
-          <input class="form-check-input" type="radio" name="aberturaflag" id="fechado" [value]="2">
-          <label class="form-check-label" for="fechado">Fechado</label>
-          </div>
-    </div>    
-  
-  
-    <div class="form-group">
-        <input type="number" class="form-control" name="placarselecao1" id="placarselecao1" [value]="">
-        <input type="number" class="form-control" name="placarselecao2" id="placarselecao2" [value]="">
+      <ul>
+        <li><a routerLink="/"><i class="fas fa-home"></i> Home</a></li>
+        <li><a routerLink="/eventolist"><i class="far fa-calendar-alt"></i> Eventos</a></li>
+        <li><a routerLink="/palpitelist"><i class="far fa-palp"></i> Meus Palpites</a></li>
+        <li><a routerLink="/ranking"><i class="fas fa-trophy"></i> Ranking</a></li>
+        <li><a routerLink="/usuario"><i class="far fa-user"></i> Meu Perfil</a></li>
+      </ul>
     </div>
   
-  
-   
-    <input type="submit" class="btn btn-primary mt-4" value="Salvar">
-    <a href="#" class="btn btn-secondary mt-4 ml-2">Cancelar</a>
-  
+  <div class="main-content">
+  <h2>Adicionar Evento</h2>
+  <form>
+    <div>
+      <label>Id:</label>
+      <input type="number" [(ngModel)]="evento.id" name="id" required>
+    </div>
+    <div>
+      <label>Selecao 1:</label>
+      <input type="text" [(ngModel)]="evento.selecao1" name="selecao1" required>
+    </div>
+    <div>
+      <label>Selecao 2:</label>
+      <input type="text" [(ngModel)]="evento.selecao2" name="selecao2" required>
+    </div>
+    <div>
+      <label>Horario Inicio:</label>
+      <input type="text" [(ngModel)]="evento.horarioinicio" name="horarioinicio" required>
+    </div>
+    <div>
+      <label>Horario Fim:</label>
+      <input type="text" [(ngModel)]="evento.horariofim" name="horariofim" required>
+    </div>
+    <div>
+      <label>Placar 1:</label>
+      <input type="number" [(ngModel)]="evento.placar1" name="placar1" required>
+    </div>
+    <div>
+      <label>Placar 2:</label>
+      <input type="number" [(ngModel)]="evento.placar2" name="placar2" required>
+    </div>
+    <div>
+      <label>Abertura Flag:</label>
+      <input type="checkbox" [(ngModel)]="evento.aberturaflag" name="aberturaflag">
+    </div>
+    <button type="submit" (click)="adicionarEvento()">Adicionar</button>
   </form>
+</div>

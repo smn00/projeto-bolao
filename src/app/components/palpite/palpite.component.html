@@ -1,16 +1,25 @@
-<h1>Palpite dos Jogos</h1>
-
-<p>Faça seu palpite sobre as seleções:</p>
-
-<form class="form_palpite">
-    <fieldset>
-        <legend>Jogo</legend>
-        <label for="jogo_casa">Seleção:</label>
-        <input type="text" id="jogo1_casa" name="jogo_selecao1" value="Selecao1" readonly>
-        <input type="number" id="palpite1" name="palpite1" placeholder="Digite seu palpite">
-        <label for="jogo_visitante">Seleção:</label>
-        <input type="text" id="jogo2_palpite" name="jogo_selecao2" value="Selecao2" readonly>
-        <input type="number" id="palpite2" name="palpite2" placeholder="Digite seu palpite">
-        <button type="submit">Enviar Palpites</button>
-    </fieldset>
-</form>
+<div class="sidebar">
+  <ul>
+    <li><a routerLink="/"><i class="fas fa-home"></i> Home</a></li>
+    <li><a routerLink="/eventolist"><i class="far fa-calendar-alt"></i> Eventos</a></li>
+    <li><a routerLink="/palpitelist"><i class="far fa-palp"></i> Meus Palpites</a></li>
+    <li><a routerLink="/ranking"><i class="fas fa-trophy"></i> Ranking</a></li>
+    <li><a routerLink="/usuario"><i class="far fa-user"></i> Meu Perfil</a></li>
+  </ul>
+</div>
+<div class="main-content">
+  <div>
+    <h2>Faça seu palpite</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="palpite-selecao1">Palpite para {{ selecao1 }}</label>
+        <input id="palpite-selecao1" type="number" name="palpiteSelecao1" required>
+      </div>
+      <div class="form-group">
+        <label for="palpite-selecao2">Palpite para {{ selecao2 }}</label>
+        <input id="palpite-selecao2" type="number" name="palpiteSelecao2" required>
+      </div>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</div>

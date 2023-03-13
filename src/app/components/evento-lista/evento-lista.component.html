@@ -1,1 +1,35 @@
-<p>evento-lista works!</p>
+
+  
+  <div class="sidebar">
+
+    <ul>
+      <li><a routerLink="/"><i class="fas fa-home"></i> Home</a></li>
+      <li><a routerLink="/eventolist"><i class="far fa-calendar-alt"></i> Eventos</a></li>
+      <li><a routerLink="/palpitelist"><i class="far fa-palp"></i> Meus Palpites</a></li>
+      <li><a routerLink="/ranking"><i class="fas fa-trophy"></i> Ranking</a></li>
+      <li><a routerLink="/usuario"><i class="far fa-user"></i> Meu Perfil</a></li>
+    </ul>
+    </div>
+    <div class="main-content">
+<table>
+    <thead>
+      <tr>
+        <th>ID do Evento</th>
+        <th>Seleção 1</th>
+        <th>Seleção 2</th>
+        <th>Horário de Início</th>
+        <th>Horário de Fim</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let evento of eventos">
+        <td>{{ evento.idevento }}</td>
+        <td>{{ evento.selecao1 }}</td>
+        <td>{{ evento.selecao2 }}</td>
+        <td>{{ evento.horarioinicio }}</td>
+        <td>{{ evento.horariofim }}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  

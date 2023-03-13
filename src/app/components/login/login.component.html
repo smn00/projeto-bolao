@@ -1,21 +1,35 @@
 
-    <h1>Login</h1>
+  
+  <div class="sidebar">
 
-    <form >
-
-        <div >
-            <label name="username">Nome de Usuário</label>
-            <input type="text" name="username" id="username" placeholder="Insira o seu Usuario" required>
-        </div>  
-
-        <div >
-            <label name="senha">Senha</label>
-            <input type="password" nome="senha"  id="senha" placeholder="Insira sua senha" required>
-        </div>
-
-        <div>
-          <input type="hidden" name="acao" value="enviar">
-          <button type="submit" name="Submit" >Entrar</button>
-        </div>
+    <ul>
+      <li><a routerLink="/"><i class="fas fa-home"></i> Home</a></li>
+      <li><a routerLink="/eventolist"><i class="far fa-calendar-alt"></i> Eventos</a></li>
+      <li><a routerLink="/palpitelist"><i class="far fa-palp"></i> Meus Palpites</a></li>
+      <li><a routerLink="/ranking"><i class="fas fa-trophy"></i> Ranking</a></li>
+      <li><a routerLink="/usuario"><i class="far fa-user"></i> Meu Perfil</a></li>
+    </ul>
+    </div>
+    <div class="main-content">
+        <h1>Login</h1>
     
-    </form>
+        <form (submit)="onSubmit()">
+            <div >
+                <label name="username">Nome de Usuário</label>
+                <input type="text" name="username" id="username"  placeholder="Insira o seu Usuario"   [(ngModel)]="usuario" required>
+            </div>  
+    
+            <div >
+                <label name="senha">Senha</label>
+                <input type="password" nome="senha"  id="senha"  placeholder="Insira sua senha" [(ngModel)]="senha" required>
+            </div>
+    
+            <div>
+              <input type="hidden" name="acao" value="enviar">
+              <button type="submit" name="Submit" >Entrar</button>
+            </div>
+        
+        </form>
+    </div>
+    
+     

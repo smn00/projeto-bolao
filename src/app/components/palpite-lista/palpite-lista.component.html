@@ -1,1 +1,34 @@
-<p>palpite-lista works!</p>
+<div class="sidebar">
+  <ul>
+    <li><a routerLink="/"><i class="fas fa-home"></i> Home</a></li>
+    <li><a routerLink="/eventolist"><i class="far fa-calendar-alt"></i> Eventos</a></li>
+    <li><a routerLink="/palpitelist"><i class="far fa-palp"></i> Meus Palpites</a></li>
+    <li><a routerLink="/ranking"><i class="fas fa-trophy"></i> Ranking</a></li>
+    <li><a routerLink="/usuario"><i class="far fa-user"></i> Meu Perfil</a></li>
+  </ul>
+</div>
+
+
+<div class="main-content">
+<table>
+    <thead>
+      <tr>
+        <th>Evento Palpite</th>
+        <th>Seleção 1</th>
+        <th>Seleção 2</th>
+        <th>Placar 1</th>
+        <th>Placar 2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let palpite of palpiteList">
+        <td>{{ palpite['palpite.eventopalpite'] }}</td>
+        <td>{{ palpite['evento.selecao1'] }}</td>
+        <td>{{ palpite['evento.selecao2'] }}</td>
+        <td>{{ palpite['palpite.placar1'] }}</td>
+        <td>{{ palpite['palpite.placar2'] }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  

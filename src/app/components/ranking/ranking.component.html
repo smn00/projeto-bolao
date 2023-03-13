@@ -1,28 +1,30 @@
-// Parte fixa, cabeçalho
-<p>Ranking Usuarios</p>
+<div class="sidebar">
+  <ul>
+    <li><a routerLink="/"><i class="fas fa-home"></i> Home</a></li>
+    <li><a routerLink="/eventolist"><i class="far fa-calendar-alt"></i> Eventos</a></li>
+    <li><a routerLink="/palpitelist"><i class="far fa-palp"></i> Meus Palpites</a></li>
+    <li><a routerLink="/ranking"><i class="fas fa-trophy"></i> Ranking</a></li>
+    <li><a routerLink="/usuario"><i class="far fa-user"></i> Meu Perfil</a></li>
+  </ul>
+</div>
+
+
+<div class="main-content">
 <table>
+  <thead>
     <tr>
-    <td> Posição</td>
-    <td>Nome</td>
-    <td>Pontuação</td>
-
-
-    // CÓDIGO PHP, VERIFICAR COMO INTEGRAR PHP NO ANGULAR
-    <?php $posicao = 1; //variavel
-    // Inclui o arquivo que faz a conexão ao banco de dadosinclude
-    ("includes/mysqli.php");
-    //consulta 
-    sql$query = mysql_query("SELECT Nome,Pontuacao FROM usuario ORDER BY pontuacao desc") or die(mysql_error());
-    //faz um looping e cria um  array com os campos da consulta
-    while($array = mysql_fetch_array($query)) {
-    $nome=$array['Nome'];$pontuacao=$array['Pontuacao'];
-    
-    ?>
-     <tr><td>
-        <?php echo $posicao; ?>
-    </td><td><?php echo $nome; ?></td><td>
-        <?php echo $pontuacao; ?></td><td>
-      
-    <?php$posicao = $posicao + 1; // acumula proxima posicao ate terminar} ?>
+      <th>Posição</th>
+      <th>Nome</th>
+      <th>Pontuação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.posicao }}</td>
+      <td>{{ user.nome }}</td>
+      <td>{{ user.pontuacao }}</td>
+    </tr>
+  </tbody>
 </table>
-    
+
+</div>

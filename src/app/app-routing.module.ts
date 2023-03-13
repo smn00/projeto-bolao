@@ -7,21 +7,22 @@ import { PalpiteListaComponent } from './components/palpite-lista/palpite-lista.
 import { PalpiteComponent } from './components/palpite/palpite.component';
 import { RankingComponent } from './components/ranking/ranking.component';
 import { SelecaoListaComponent } from './components/selecao-lista/selecao-lista.component';
+import { SelecaoComponent } from './components/selecao/selecao.component';
 import { UsuarioListaComponent } from './components/usuario-lista/usuario-lista.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
 import { Selecao } from './modelos/selecao.model';
 
 const routes: Routes = [
   {path:"login",component:LoginComponent},
-  {path:"selecao/listar", component:SelecaoListaComponent},
-  {path:"selecao",component:Selecao},
-  {path:"evento/listar", component:EventoListaComponent},
+  {path:"selecaolist", component:SelecaoListaComponent},
+  {path:"selecao",component:SelecaoComponent},
   {path:"evento",component:EventoComponent},
+  {path:"eventolist",component:EventoListaComponent}, 
   {path:"palpite",component:PalpiteComponent},
-  {path:"palpite/listar",component:PalpiteListaComponent},
+  {path:"palpitelist",component:PalpiteListaComponent},
   {path:"ranking",component:RankingComponent},
   {path:"usuario",component:UsuarioComponent},
-  {path:"usuario/listar",component:UsuarioListaComponent}
+  {path:"usuariolist",component:UsuarioListaComponent}
   
 
   

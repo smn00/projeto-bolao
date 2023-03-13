@@ -1,0 +1,125 @@
+/* Estilos para a barra lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background: linear-gradient(to bottom, #008000, #006600);
+    opacity: 0.8;
+    color: #fff;
+    overflow-y: auto;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar li {
+    padding: 15px 20px;
+  }
+  
+  .sidebar li:hover {
+    background-color: #444;
+  }
+  
+  .sidebar a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .sidebar i {
+    margin-right: 10px;
+  }
+  
+  /* Estilos para o conteúdo principal da página */
+  .main-content {
+    margin-left: 200px; /* igual à largura da barra de navegação */
+    padding: 20px;
+    text-align: center;
+  }
+  /* Estilos para a barra lateral */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background: linear-gradient(to bottom, #008000, #006600);
+    opacity: 0.8;
+    color: #fff;
+    overflow-y: auto;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar li {
+    padding: 15px 20px;
+  }
+  
+  .sidebar li:hover {
+    background-color: #444;
+  }
+  
+  .sidebar a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .sidebar i {
+    margin-right: 10px;
+  }
+  
+  /* Estilos para o conteúdo principal da página */
+  .main-content {
+    margin-left: 200px; /* igual à largura da barra de navegação */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Estilos para a tabela de ranking */
+  table {
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+  
+  table thead th {
+    background-color: #008000;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  table tbody td {
+    padding: 10px;
+  }
+  
+  /* Estilos para a tabela de ranking */
+  table {
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+  
+  table thead th {
+    background-color: #008000;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  table tbody td {
+    padding: 10px;
+  }
+  

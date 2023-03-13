@@ -1,10 +1,30 @@
-<form>
-    <h1>Seleção</h1>
-    <label>Seleção</label>
-    <input type="text" name= "selecao" id="selecao" placeholder="cadastre a seleção" required>
+<div class="sidebar">
+  <ul>
+    <li><a routerLink="/"><i class="fas fa-home"></i> Home</a></li>
+    <li><a routerLink="/eventolist"><i class="far fa-calendar-alt"></i> Eventos</a></li>
+    <li><a routerLink="/palpitelist"><i class="far fa-palp"></i> Meus Palpites</a></li>
+    <li><a routerLink="/ranking"><i class="fas fa-trophy"></i> Ranking</a></li>
+    <li><a routerLink="/usuario"><i class="far fa-user"></i> Meu Perfil</a></li>
+  </ul>
+</div>
 
-    
-    <button type="submit" name="Submit" class="submit_btn" >Salvar</button>
+<div class="main-content">
 
-</form>
-
+<div *ngIf="selecoes">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let selecao of selecoes">
+          <td>{{ selecao.id }}</td>
+          <td>{{ selecao.nome }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  
